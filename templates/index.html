@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="../static/script.js" defer></script>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <span>🤖 ALI IA</span>
+        </header>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                Bonjour posez moi toute vos question
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Entrez votre message..." autocomplete="on">
+            <button onclick="sendMessage()">
+                Envoyez ✈️
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
