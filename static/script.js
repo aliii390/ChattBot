@@ -24,7 +24,6 @@ function sendMessage() {
     })
     .then(response => response.json())
     .then(data => {
-        // Display bot response
         const botMessageDiv = document.createElement('div');
         botMessageDiv.className = 'message bot-message';
         botMessageDiv.textContent = data.response;

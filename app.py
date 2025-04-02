@@ -3,7 +3,7 @@ from test import MistralAssistant  # Importation de la classe depuis test.py
 
 app = Flask(__name__)
 
-# Initialisation de l'assistant Mistral
+# assistant mistral
 assistant = MistralAssistant()
 
 @app.route('/')
@@ -16,7 +16,7 @@ def chat():
     if not user_message:
         return jsonify({'response': " Aucun message reçu."}), 400
 
-    # Utilisation de l'assistant pour obtenir une réponse
+    # utilisation de l'assistant pour obtenir une réponse
     bot_response = assistant.ask(user_message)
     if bot_response:
         return jsonify({'response': bot_response})
@@ -25,13 +25,7 @@ def chat():
     
 
 
-@app.route('/historique', methods=['GET'])
-def historique():
-    # Récupérer l'historique depuis l'instance de MistralAssistant
-    historique_conversations = assistant.conversation_history
-    
-    # Retourner l'historique au format JSON
-    return jsonify({'historique': historique_conversations})
+
 
 if __name__ == '__main__':
     app.run(debug=True)
