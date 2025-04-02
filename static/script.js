@@ -36,4 +36,18 @@ function sendMessage() {
     .catch(error => {
         console.error('Error:', error);
     });
+
+
+    fetch('/historique', {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({})
+    })
+
+
+
+
+    
 }
